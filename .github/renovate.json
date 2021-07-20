@@ -1,0 +1,32 @@
+{
+  "extends": ["config:base"],
+  "semanticCommits": "enabled",
+  "pin": {
+    "automerge": true,
+    "labels": ["dependencies"]
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true,
+      "labels": ["dependencies"],
+      "semanticCommitType": "build"
+    },
+    {
+      "matchLanguages": ["javascript"],
+      "matchDepTypes": ["dependencies"],
+      "labels": ["dependencies", "javascript"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommitType": "build"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "updateTypes": ["patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommitType": "ci"
+    }
+  ],
+  "timezone": "Africa/Lusaka",
+  "schedule": ["after 10pm every weekday", "every weekend"]
+}
