@@ -1,24 +1,20 @@
 {
-  "name": "scriptureunion.org.zm-landing",
-  "version": "0.1.0",
-  "description": "Minimal landing page for scriptureunion.org.zm",
-  "main": "index.js",
-  "author": "@engineervix",
-  "license": "MIT",
-  "scripts": {
-    "clean": "rm -rf dist && rm -rf .cache",
-    "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html --out-dir ./dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/su-zm/su-zm.github.io.git"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.2.1",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint": "^7.20.0"
+    "name": "scriptureunion.org.zm-landing",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "devDependencies": {
+      "autoprefixer": "^10.4.16",
+      "postcss": "^8.4.31",
+      "tailwindcss": "^3.3.5",
+      "vite": "^5.0.0"
+    },
+    "dependencies": {
+      "@phosphor-icons/web": "^2.0.3"
+    }
   }
-}
